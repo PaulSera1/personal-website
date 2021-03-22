@@ -1,0 +1,97 @@
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+body {
+  background-color: #f3e1e1 !important;
+}
+
+section {
+  margin-top: 175px;
+}
+
+#nav-bar {
+  text-align: center;
+  color: white;
+  box-shadow: gray;
+  .name {
+    color: white;
+  }
+}
+
+.nav-link {
+  color: darkblue !important;
+  font-size: large;
+  margin-right: 15px !important;
+  &:hover {
+    background-color: #007bff;
+    color: white !important;
+    border-radius: 4px;
+  }
+}
+
+.faint-white-bg {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-brand {
+  margin-left: 10%;
+  font-size: x-large !important;
+  color: #007bff !important;
+  font-weight: bold;
+}
+
+.line-mf {
+  background-color: #007bff;
+  width: 40px;
+  height: 5px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  position: relative !important;
+  text-align: center !important;
+  color: white;
+}
+
+.centered-text {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.intro-title {
+  font-size: 5rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: white;
+  padding: 10px;
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.title-box {
+  margin-bottom: 50px;
+}
+
+.title-a {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.box-shadow-full {
+  padding: 3rem 1.25rem;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  z-index: 2;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+@import "~bootstrap/scss/bootstrap";
