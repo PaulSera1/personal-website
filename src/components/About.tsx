@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 
 type AboutProps = {};
 
-const About: FunctionComponent<AboutProps> = () => (
+export const About: FunctionComponent<AboutProps> = () => (
   <section id="about">
     <Container>
       <div className="title-box text-center">
@@ -29,5 +29,3 @@ const About: FunctionComponent<AboutProps> = () => (
     </Container>
   </section>
 );
-
-export default About;

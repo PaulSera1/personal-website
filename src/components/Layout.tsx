@@ -1,15 +1,15 @@
 import React, {
   FunctionComponent
 } from 'react';
-import Navbar from './NavBar';
+import {
+  NavBar
+} from './NavBar';
 
 type LayoutProps = {};
 
-const Layout: FunctionComponent<LayoutProps> = ({ children }) => (
+export const Layout: FunctionComponent<LayoutProps> = ({ children }) => (
   <>
-    <Navbar />
+    <NavBar />
     {children}
   </>
 );
-
-export default Layout;

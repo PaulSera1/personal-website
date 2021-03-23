@@ -41,7 +41,7 @@ export const Project: FunctionComponent<ProjectProps> = ({ image, title, descrip
   </Column>
 );
 
-const Projects: FunctionComponent<ProjectsProps> = () => (
+export const Projects: FunctionComponent<ProjectsProps> = () => (
   <section id="projects" className="portfolio-mf sect-pt4 route">
     <Container>
       <div className="title-box text-center">
@@ -63,5 +63,3 @@ const Projects: FunctionComponent<ProjectsProps> = () => (
     </Container>
   </section>
 );
-
-export default Projects;

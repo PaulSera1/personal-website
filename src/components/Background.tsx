@@ -8,7 +8,7 @@ import BackgroundImage from './assets/background.jpg';
 
 type BackgroundProps = {};
 
-const Background: FunctionComponent<BackgroundProps> = () => (
+export const Background: FunctionComponent<BackgroundProps> = () => (
   <Container id="home" fluid>
     <Row>
       <Image style={{height: '100vh', width: '100%', objectFit: 'cover'}} fluid src={BackgroundImage} />
@@ -25,5 +25,3 @@ const Background: FunctionComponent<BackgroundProps> = () => (
     </Row>
   </Container>
 );
-
-export default Background;

@@ -7,7 +7,7 @@ import $ from 'jquery';
 
 type NavBarProps = {};
 
-export default function NavBar(props: NavBarProps) {
+export function NavBar(props: NavBarProps) {
 
   const [scrolled, setScrolled] = useState(false);
 

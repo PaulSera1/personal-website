@@ -1,12 +1,11 @@
 import {
   Layout,
   Background,
-  About,
-  Projects
+  Projects,
+  About
 } from './components';
 
 function App(): JSX.Element {
-
   return (
     <Layout>
       <Background />
