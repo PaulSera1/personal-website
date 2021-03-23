@@ -4,6 +4,8 @@ import type {
 import Container from 'react-bootstrap/Container';
 import Column from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
+import ChatApp from './assets/chatapp.png';
 
 type ProjectsProps = {};
 
@@ -14,18 +16,29 @@ const Projects: FunctionComponent<ProjectsProps> = () => (
         <h1 className="title-a">PROJECTS</h1>
         <div className="line-mf" />
       </div>
-      <div className="box-shadow-full">
-        <Row>
-          <Column lg={6}>
-            <div className="about-me pt-4 pb-pt-md-0">
-              <p className="lead">test text</p>
-            </div>
-          </Column>
-          <Column lg={6} className="d-none d-lg-flex border-left">
-            <img src="" />
-          </Column>
-        </Row>
-      </div>
+      <Row>
+        <Column>
+          <Card className="shadow mb-5 bg-white rounded">
+            <Card.Img variant="top" src={ChatApp} />
+            <Card.Body>
+              <Card.Title>wChat</Card.Title>
+              <Card.Text>
+                Chat application which organizes chatrooms in easy-to-use channels.
+                Uses an invite system to faciliate access and preserve optional privacy.
+                Completed from start to finish in less than one week.
+              </Card.Text>
+              <div className="w-more">
+                <span className="w-category">JavaScript, SQLite3</span>
+                <a className="project-link" href="https://github.com/PaulSera1/chatapp" target="_blank" rel="noreferrer">
+                  <i className="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </div>
+            </Card.Body>
+          </Card>
+        </Column>
+        <Column>
+        </Column>
+      </Row>
     </Container>
   </section>
 );

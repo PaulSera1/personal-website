@@ -9,11 +9,11 @@ import BackgroundImage from './assets/background.jpg';
 type BackgroundProps = {};
 
 const Background: FunctionComponent<BackgroundProps> = () => (
-  <Container fluid>
+  <Container id="home" fluid>
     <Row>
-      <Image fluid src={BackgroundImage} />
+      <Image style={{height: '100vh', width: '100%', objectFit: 'cover'}} fluid src={BackgroundImage} />
       <div className="centered-text">
-        <h1 className="intro-title">Paul Serafimescu</h1>
+        <h1 className="intro-title"><br />Paul Serafimescu</h1>
         <h3>UCLA Computer Science and Engineering</h3>
         <a href="/">
           <i className="icon fa fa-github" aria-hidden="true"></i>

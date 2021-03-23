@@ -22,7 +22,7 @@ const About: FunctionComponent<AboutProps> = () => (
             </div>
           </Column>
           <Column lg={6} className="d-none d-lg-flex border-left">
-            <img src="" />
+            img goes here
           </Column>
         </Row>
       </div>
