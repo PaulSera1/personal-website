@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #f3e1e1 !important;
+  background-color: #fcf4f4 !important;
 }
 
 section {
@@ -38,7 +38,6 @@ section {
 }
 
 .navbar-brand {
-  margin-left: 10%;
   font-size: x-large !important;
   color: #007bff !important;
   font-weight: bold;
@@ -135,8 +134,37 @@ section {
   -webkit-transition: background-color 400ms linear;
   transition: background-color 400ms linear;
   -ms-transition: background-color 400ms linear;
+  -webkit-box-shadow: 0 8px 6px -6px grey;
+  -moz-box-shadow: 0 8px 6px -6px grey;
+  box-shadow: 0 8px 6px -6px grey;
 }
 
+.project-box {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.project-img {
+  display: block;
+  overflow: hidden;
+}
+
+.project-img img {
+  transition: all 1s;
+}
+
+.project-description {
+  background-color: white;
+  padding: 2rem 3% 1rem 4%;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.project-title {
+  font-size: 1.2rem;
+}
 
 .w-more {
   color: #4e4e4e;

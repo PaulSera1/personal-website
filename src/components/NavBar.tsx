@@ -32,7 +32,7 @@ export default function NavBar(props: NavBarProps) {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           {Object.entries(sections).map(([key, value]) => (
-            <Nav.Link href={value}>{key}</Nav.Link>
+            <Nav.Link key={key} href={value}>{key}</Nav.Link>
           ))}
           <a className="btn btn-primary resume-btn" href="resume.pdf">Resume</a>
         </Nav>

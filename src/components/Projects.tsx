@@ -4,40 +4,61 @@ import type {
 import Container from 'react-bootstrap/Container';
 import Column from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import Card from 'react-bootstrap/Card';
 import ChatApp from './assets/chatapp.png';
+import projectData from './assets/Projects';
+
+type ProjectProps = {
+  image: string;
+  title: string;
+  description: string;
+  languages: string[];
+  ghLink: string;
+};
 
 type ProjectsProps = {};
 
+export const Project: FunctionComponent<ProjectProps> = ({ image, title, description, languages, ghLink }) => (
+  <Column md={6}>
+    <div className="project-box">
+      <div className="project-img">
+        <img className="img-fluid" src={image} alt="" />
+      </div>
+      <div className="project-description">
+        <Row>
+          <Column sm={12}>
+            <h4 className="p-title">{title}</h4>
+            <p className="font-weight-light">{description}</p>
+            <div className="w-more">
+              <span className="w-category">{languages.join(', ')}</span>
+              <a className="project-link" href={ghLink} target="_blank" rel="noreferrer">
+                <i className="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </div>
+          </Column>
+        </Row>
+      </div>
+    </div>
+  </Column>
+);
+
 const Projects: FunctionComponent<ProjectsProps> = () => (
-  <section id="projects">
+  <section id="projects" className="portfolio-mf sect-pt4 route">
     <Container>
       <div className="title-box text-center">
         <h1 className="title-a">PROJECTS</h1>
         <div className="line-mf" />
       </div>
       <Row>
-        <Column>
-          <Card className="shadow mb-5 bg-white rounded">
-            <Card.Img variant="top" src={ChatApp} />
-            <Card.Body>
-              <Card.Title>wChat</Card.Title>
-              <Card.Text>
-                Chat application which organizes chatrooms in easy-to-use channels.
-                Uses an invite system to faciliate access and preserve optional privacy.
-                Completed from start to finish in less than one week.
-              </Card.Text>
-              <div className="w-more">
-                <span className="w-category">JavaScript, SQLite3</span>
-                <a className="project-link" href="https://github.com/PaulSera1/chatapp" target="_blank" rel="noreferrer">
-                  <i className="fa fa-github" aria-hidden="true"></i>
-                </a>
-              </div>
-            </Card.Body>
-          </Card>
-        </Column>
-        <Column>
-        </Column>
+        {projectData.map(project => (
+          <Project
+            key={project.title}
+            image={ChatApp}
+            title={project.title}
+            description={project.description}
+            languages={project.languages}
+            ghLink={project.ghLink}
+          />
+        ))}
       </Row>
     </Container>
   </section>
