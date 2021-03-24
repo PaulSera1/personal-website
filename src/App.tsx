@@ -2,7 +2,8 @@ import {
   Layout,
   Background,
   Projects,
-  About
+  About,
+  Contact
 } from './components';
 
 function App(): JSX.Element {
@@ -11,6 +12,7 @@ function App(): JSX.Element {
       <Background />
       <About />
       <Projects />
+      <Contact />
     </Layout>
   );
 }
