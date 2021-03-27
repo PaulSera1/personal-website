@@ -64,9 +64,18 @@ section {
   font-size: 5rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .intro-title {
     font-size: 4rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .intro-title {
+    font-size: 3rem;
+  }
+  .centered-text > h3 {
+    font-size: 1.4rem;
   }
 }
 
@@ -108,7 +117,7 @@ section {
   color: white;
   padding: 10px;
   &:hover {
-    color: #000;
+    color: #007bff;
   }
 }
 
@@ -231,6 +240,19 @@ input[type=submit]:hover {
   background-color: #01499c;
 }
 
+.bg-image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
 
+.box-image {
+  margin: auto;
+  width: 20rem;
+  height: 33rem;
+  vertical-align: middle;
+  border-style: none;
+}
 
 @import "~bootstrap/scss/bootstrap";

@@ -15,7 +15,7 @@ export const Background: FunctionComponent<BackgroundProps> = () => (
       <div className="centered-text">
         <h1 className="intro-title"><br />Paul Serafimescu</h1>
         <h3>UCLA Computer Science and Engineering</h3>
-        <a href="/">
+        <a href="https://github.com/PaulSera1" target="_blank">
           <i className="icon fa fa-github" aria-hidden="true"></i>
         </a>
         <a href="/">
