@@ -35,7 +35,7 @@ export function NavBar(props: NavBarProps) {
             {Object.entries(sections).map(([key, value]) => (
               <Nav.Link id={key} key={key} href={value}>{key}</Nav.Link>
             ))}
-            <a className="btn btn-primary resume-btn" href="resume.pdf">Resume</a>
+            <a className="btn btn-primary resume-btn" target="_blank" rel="noreferrer" href="resume.pdf">Resume</a>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

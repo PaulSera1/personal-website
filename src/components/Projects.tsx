@@ -4,10 +4,9 @@ import type {
 import Container from 'react-bootstrap/Container';
 import Column from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import ChatApp from './assets/chatapp.png';
-import projectData from './assets/Projects';
+import ProjectData from './assets/Projects.json';
 
-type ProjectProps = {
+interface ProjectProps {
   image: string;
   title: string;
   description: string;
@@ -15,7 +14,7 @@ type ProjectProps = {
   ghLink: string;
 };
 
-type ProjectsProps = {};
+interface ProjectsProps {};
 
 export const Project: FunctionComponent<ProjectProps> = ({ image, title, description, languages, ghLink }) => (
   <Column md={6}>
@@ -49,10 +48,10 @@ export const Projects: FunctionComponent<ProjectsProps> = () => (
         <div className="line-mf" />
       </div>
       <Row>
-        {projectData.map(project => (
+        {ProjectData.map(project => (
           <Project
             key={project.title}
-            image={ChatApp}
+            image={project.image}
             title={project.title}
             description={project.description}
             languages={project.languages}
